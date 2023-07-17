@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
-@Service
+//@Service  //comment out because we have 2 @Service, it will be conflicted
 public class ProductCacheTemplate extends CacheTemplate<Integer, Product> {
 
-    @Autowired
+    //@Autowired
     private ProductRepository repository;
     private RMapReactive<Integer, Product> map;
 
